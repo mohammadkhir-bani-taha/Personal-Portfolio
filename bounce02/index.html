@@ -2,260 +2,591 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MohammadKhir | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MohammadKhir Bani Taha — Software Developer and Cybersecurity Enthusiast.">
+  <title>MohammadKhir Bani Taha | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <!-- Header & Navbar -->
-    <header>
-        <nav>
-            <h2>MohammadKhir Bani Taha</h2>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#home">MK<span>.</span></a>
 
-            <ul>
-                <li>
-                    <a href="#about" data-i18n="navAbout">About</a>
-                </li>
-                <li>
-                    <a href="#skills" data-i18n="navSkills">Skills</a>
-                </li>
-                <li>
-                    <a href="#projects" data-i18n="navProjects">Projects</a>
-                </li>
-                <li>
-                    <a href="#hobbies" data-i18n="navHobbies">Hobbies</a>
-                </li>
-                <li>
-                    <a href="#contact" data-i18n="navContact">Contact</a>
-                </li>
-            </ul>
+      <button class="menu-toggle" id="menuBtn" type="button"
+        aria-expanded="false" aria-controls="navLinks">☰</button>
 
-            <div class="nav-buttons">
-                <button id="themeBtn" type="button"
-                        data-i18n="themeBtn">
-                    Change Theme
-                </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#skills" data-i18n="navSkills">Skills</a></li>
+        <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="#journey" data-i18n="navJourney">Journey</a></li>
+        <li><a href="#hobbies" data-i18n="navHobbies">Interests</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+      </ul>
 
-                <button id="langBtn" type="button">
-                    العربية
-                </button>
-            </div>
-        </nav>
-    </header>
+      <div class="nav-actions">
+        <button id="themeBtn" class="icon-btn" type="button"
+          aria-label="Change theme">☀</button>
 
-    <main>
 
-        <!-- About Me -->
-        <section id="about">
-            <h1 data-i18n="heroTitle">
-                Hello, I'm MohammadKhir
-            </h1>
 
-            <img
-                src="assets/profile.jpg"
-                alt="MohammadKhir profile photo"
-                width="200"
-            >
 
-            <p data-i18n="aboutText">
-                I'm a Computer Science graduate from
-                Yarmouk University, interested in
-                Web Development and Cybersecurity.
-            </p>
-        </section>
+          
+        <button id="langBtn" class="lang-btn" type="button">العربية</button>
+      </div>
+    </nav>
+  </header>
 
-        <!-- Skills -->
-        <section id="skills">
-            <h2 data-i18n="skillsTitle">My Skills</h2>
+  <main>
 
-            <div class="skills-grid">
-                <div class="skill-card" data-i18n="skill1">
-                    HTML & CSS & JavaScript
-                </div>
+    <!-- HERO WITH PROFILE PHOTO -->
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="heroEyebrow">
+          Open to opportunities
+        </span>
 
-                <div class="skill-card" data-i18n="skill2">
-                    Backend Python with Flask
-                </div>
+        <p class="hello" data-i18n="heroHello">Hello, I'm</p>
 
-                <div class="skill-card" data-i18n="skill3">
-                    Java & C++
-                </div>
+        <h1>MohammadKhir <span>Bani Taha</span></h1>
 
-                <div class="skill-card" data-i18n="skill4">
-                    Git & GitHub & Linux
-                </div>
-            </div>
-        </section>
+        <h2 data-i18n="heroRole">
+          Software Developer | Cybersecurity Enthusiast
+        </h2>
 
-        <!-- Projects -->
-        <section id="projects">
-            <h2 data-i18n="projectsTitle">My Projects</h2>
-
-            <div class="projects-grid">
-
-                <article class="project-card">
-                    <h3 data-i18n="project0Title">
-                        Project 00 - Linux & Git
-                    </h3>
-
-                    <p data-i18n="project0Desc">
-                        Practiced Linux terminal commands,
-                        file management, and Git workflows.
-                    </p>
-                </article>
-
-                <article class="project-card">
-                    <h3 data-i18n="project1Title">
-                        Project 01 - HTML
-                    </h3>
-
-                    <p data-i18n="project1Desc">
-                        Built web pages using semantic HTML
-                        elements and proper page structure.
-                    </p>
-                </article>
-
-                <article class="project-card">
-                    <h3 data-i18n="project2Title">
-                        Project 02 - CSS
-                    </h3>
-
-                    <p data-i18n="project2Desc">
-                        Practiced CSS styling, layouts,
-                        Flexbox, and animations.
-                    </p>
-                </article>
-
-                <article class="project-card">
-                    <h3 data-i18n="project3Title">
-                        Project 03 - JavaScript
-                    </h3>
-
-                    <p data-i18n="project3Desc">
-                        Practiced JavaScript fundamentals,
-                        events, and DOM manipulation.
-                    </p>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Hobbies -->
-        <section id="hobbies">
-            <h2 data-i18n="hobbiesTitle">My Hobbies</h2>
-
-            <ul>
-                <li data-i18n="hobby1">Programming</li>
-                <li data-i18n="hobby2">Learning New Technologies</li>
-                <li data-i18n="hobby3">Cybersecurity</li>
-                <li data-i18n="hobby4">Problem Solving</li>
-            </ul>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-            <h2 data-i18n="contactTitle">Contact Me</h2>
-
-            <div class="contact-container">
-
-                <p data-i18n="contactIntro">
-                    Feel free to reach out to me through
-                    any of the platforms below:
-                </p>
-
-                <div class="contact-links">
-
-                    <a href="mailto:mohammadkhirbanitaha@gmail.com"
-                       class="contact-card">
-                        <h3 data-i18n="emailTitle">Email</h3>
-                        <p>mohammadkhirbanitaha@gmail.com</p>
-                    </a>
-
-                    <a href="https://github.com/mohammadkhir-bani-taha"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-card">
-                        <h3>GitHub</h3>
-                        <p>github.com/mohammadkhir-bani-taha</p>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/mohammadkhir-bani-taha-474792302"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact-card">
-                        <h3>LinkedIn</h3>
-                        <p>MohammadKhir Bani Taha</p>
-                    </a>
-
-                </div>
-
-                <!-- Contact Form -->
-                <form id="contactForm">
-                    <h3 data-i18n="formTitle">
-                        Send Me a Message
-                    </h3>
-
-                    <label for="name" data-i18n="nameLabel">
-                        Your Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                        data-i18n-placeholder="namePlaceholder"
-                        required
-                    >
-
-                    <label for="email" data-i18n="emailLabel">
-                        Your Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        data-i18n-placeholder="emailPlaceholder"
-                        required
-                    >
-
-                    <label for="message" data-i18n="messageLabel">
-                        Your Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Write your message..."
-                        data-i18n-placeholder="messagePlaceholder"
-                        required
-                    ></textarea>
-
-                    <button type="submit" data-i18n="sendBtn">
-                        Send Message
-                    </button>
-                </form>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p data-i18n="footerText">
-            © 2026 MohammadKhir. All rights reserved.
+        <p class="lead" data-i18n="heroDescription">
+          Computer Science graduate from Yarmouk University.
+          I enjoy building practical software, solving challenging
+          problems, and learning how to make web applications more secure.
         </p>
-    </footer>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary"
+            data-i18n="viewProjects">Explore Projects ↗</a>
+          <a href="#contact" class="btn btn-secondary"
+            data-i18n="contactMe">Get in Touch</a>
+        </div>
+
+        <div class="social-inline">
+          <a href="https://github.com/mohammadkhir-bani-taha"
+            target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/mohammadkhir-bani-taha-474792302"
+            target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-area">
+        <div class="photo-glow"></div>
+        <div class="photo-frame">
+          <img src="assets/profile.jpg"
+            alt="MohammadKhir Bani Taha profile photo"
+            class="profile-photo">
+        </div>
+        <div class="photo-label" data-i18n="photoLabel">
+          Developer · Problem Solver
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section alt-section">
+      <div class="container about-layout">
+        <div>
+          <p class="section-kicker" data-i18n="aboutKicker">
+            01 / ABOUT
+          </p>
+          <h2 class="section-title" data-i18n="aboutTitle">
+            A little about me.
+          </h2>
+        </div>
+
+        <div class="about-copy">
+          <p data-i18n="aboutText1">
+            I'm a Computer Science graduate from Yarmouk University
+            (2026), based in Jordan. My interests span software
+            engineering, web development, problem-solving,
+            and application security.
+          </p>
+
+          <p data-i18n="aboutText2">
+            Through university projects and the 42 Amman Web Piscine,
+            I've gained hands-on experience with programming,
+            web technologies, Git, and Linux.
+          </p>
+
+          <div class="about-facts">
+            <div>
+              <strong>2026</strong>
+              <span data-i18n="factGrad">CS Graduate</span>
+            </div>
+            <div>
+              <strong>42</strong>
+              <span data-i18n="fact42">Amman Piscine</span>
+            </div>
+            <div>
+              <strong>4th</strong>
+              <span data-i18n="factPlace">University Competition</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="section-kicker" data-i18n="skillsKicker">
+          02 / EXPERTISE
+        </p>
+        <h2 class="section-title" data-i18n="skillsTitle">
+          Technical Skills.
+        </h2>
+        <p class="section-subtitle" data-i18n="skillsIntro">
+          Technologies and concepts I've studied and practiced.
+        </p>
+
+        <div class="skill-groups">
+          <article class="panel">
+            <div class="panel-icon">⌘</div>
+            <h3 data-i18n="skillProgramming">Programming</h3>
+            <div class="chips">
+              <span>Python</span><span>Java</span>
+              <span>C++</span><span>JavaScript</span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-icon">◇</div>
+            <h3 data-i18n="skillWeb">Web Development</h3>
+            <div class="chips">
+              <span>HTML5</span><span>CSS3</span>
+              <span>Responsive Design</span><span>DOM</span>
+              <span>REST APIs</span><span>Flask</span>
+              <span>Django</span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-icon">▤</div>
+            <h3 data-i18n="skillData">Databases & Tools</h3>
+            <div class="chips">
+              <span>SQL</span><span>PostgreSQL</span>
+              <span>SQLAlchemy</span><span>Git</span>
+              <span>GitHub</span><span>Linux</span>
+              <span>Docker (Basics)</span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-icon">◎</div>
+            <h3 data-i18n="skillConcepts">Core Concepts & Interests</h3>
+            <div class="chips">
+              <span>Data Structures</span><span>Algorithms</span>
+              <span>Problem Solving</span>
+              <span>Networking Fundamentals</span>
+              <span>AppSec Fundamentals</span>
+              <span>Prompt Engineering</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt-section">
+      <div class="container">
+        <p class="section-kicker" data-i18n="projectsKicker">
+          03 / SELECTED WORK
+        </p>
+        <h2 class="section-title" data-i18n="projectsTitle">
+          Featured Projects.
+        </h2>
+        <p class="section-subtitle" data-i18n="projectsIntro">
+          Academic and hands-on learning projects.
+        </p>
+
+        <div class="projects-grid">
+
+          <article class="project-card featured">
+            <div class="project-graphic graphic-eds">
+              <span>EDS</span>
+            </div>
+            <div class="project-info">
+              <span class="badge" data-i18n="badgeGraduation">
+                Graduation Project
+              </span>
+              <span class="badge badge-muted" data-i18n="badgePrivate">
+                Private Source
+              </span>
+
+              <h3 data-i18n="edsTitle">
+                Smart Exam Distribution System
+              </h3>
+
+              <p data-i18n="edsDesc">
+                A university exam scheduling and lab-allocation
+                system. My main contribution was the Micro-Assigner,
+                which allocates students to sessions and devices
+                while respecting capacity and conflict constraints.
+                I also contributed to the data model.
+              </p>
+
+              <div class="tech-tags">
+                <span>Python</span><span>Flask</span>
+                <span>PostgreSQL</span><span>SQLAlchemy</span>
+                <span>CP-SAT</span>
+              </div>
+
+              <p class="privacy-note" data-i18n="edsPrivacy">
+                Source code and system screenshots are not
+                publicly available.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-graphic graphic-web">
+              <span>00</span>
+            </div>
+            <div class="project-info">
+              <span class="badge">42 Amman</span>
+              <h3 data-i18n="project00Title">
+                Project 00 — Linux & Git
+              </h3>
+              <p data-i18n="project00Desc">
+                Linux commands, file management, Git commits,
+                and remote repository workflows.
+              </p>
+              <div class="tech-tags">
+                <span>Linux</span><span>Git</span>
+              </div>
+              <a class="project-link"
+                href="https://github.com/mohammadkhir-bani-taha"
+                target="_blank" rel="noopener noreferrer"
+                data-i18n="githubProfile">Explore GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-graphic graphic-web">
+              <span>01</span>
+            </div>
+            <div class="project-info">
+              <span class="badge">42 Amman</span>
+              <h3 data-i18n="project01Title">Project 01 — HTML</h3>
+              <p data-i18n="project01Desc">
+                Semantic page structure, links, images,
+                forms, and accessible HTML elements.
+              </p>
+              <div class="tech-tags"><span>HTML5</span></div>
+              <a class="project-link"
+                href="https://github.com/mohammadkhir-bani-taha"
+                target="_blank" rel="noopener noreferrer"
+                data-i18n="githubProfile">Explore GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-graphic graphic-web">
+              <span>02</span>
+            </div>
+            <div class="project-info">
+              <span class="badge">42 Amman</span>
+              <h3 data-i18n="project02Title">Project 02 — CSS</h3>
+              <p data-i18n="project02Desc">
+                Responsive layouts with Flexbox, styling,
+                transitions, and animations.
+              </p>
+              <div class="tech-tags">
+                <span>CSS3</span><span>Flexbox</span>
+              </div>
+              <a class="project-link"
+                href="https://github.com/mohammadkhir-bani-taha"
+                target="_blank" rel="noopener noreferrer"
+                data-i18n="githubProfile">Explore GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-graphic graphic-web">
+              <span>03</span>
+            </div>
+            <div class="project-info">
+              <span class="badge">42 Amman</span>
+              <h3 data-i18n="project03Title">
+                Project 03 — JavaScript
+              </h3>
+              <p data-i18n="project03Desc">
+                JavaScript fundamentals, events,
+                DOM manipulation, and interactive pages.
+              </p>
+              <div class="tech-tags">
+                <span>JavaScript</span><span>DOM</span>
+              </div>
+              <a class="project-link"
+                href="https://github.com/mohammadkhir-bani-taha"
+                target="_blank" rel="noopener noreferrer"
+                data-i18n="githubProfile">Explore GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-graphic graphic-automata">
+              <span>q₀ → q₁</span>
+            </div>
+            <div class="project-info">
+              <span class="badge" data-i18n="badgeAcademic">
+                Academic Project
+              </span>
+              <h3 data-i18n="automataTitle">
+                DFA / NFA Converter
+              </h3>
+              <p data-i18n="automataDesc">
+                A Computer Science course project focused on
+                finite automata and the relationship between
+                nondeterministic and deterministic state machines.
+              </p>
+              <div class="tech-tags">
+                <span>Automata Theory</span>
+                <span>Algorithms</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="journey" class="section">
+      <div class="container">
+        <p class="section-kicker" data-i18n="journeyKicker">
+          04 / GROWTH
+        </p>
+        <h2 class="section-title" data-i18n="journeyTitle">
+          Education & Learning.
+        </h2>
+
+        <div class="journey-grid">
+          <div class="journey-column">
+            <h3 data-i18n="educationTitle">
+              Education & Training
+            </h3>
+
+            <article class="timeline-item">
+              <span class="timeline-year">2026</span>
+              <h4 data-i18n="yuTitle">BSc in Computer Science</h4>
+              <p data-i18n="yuDesc">
+                Yarmouk University — Jordan
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-year">2026</span>
+              <h4 data-i18n="piscineTrainingTitle">
+                42 Amman — Web Piscine
+              </h4>
+              <p data-i18n="piscineTrainingDesc">
+                Hands-on learning in Git, Linux, HTML,
+                CSS, and JavaScript.
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-year" data-i18n="trainingLabel">
+                Training
+              </span>
+              <h4 data-i18n="djangoTitle">
+                Python Django Training
+              </h4>
+              <p data-i18n="djangoDesc">
+                Three months of training focused on Django
+                web development concepts.
+              </p>
+            </article>
+          </div>
+
+          <div class="journey-column">
+            <h3 data-i18n="certTitle">
+              Courses & Achievements
+            </h3>
+
+            <article class="timeline-item">
+              <span class="timeline-year" data-i18n="achievementLabel">
+                Achievement
+              </span>
+              <h4 data-i18n="placeTitle">
+                4th Place — Problem Solving
+              </h4>
+              <p data-i18n="placeDesc">
+                Placed fourth in a university-level
+                problem-solving competition.
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-year" data-i18n="courseLabel">
+                Course
+              </span>
+              <h4 data-i18n="problemTitle">
+                Problem Solving — Level 5
+              </h4>
+              <p data-i18n="problemDesc">
+                Completed the Problem Solving Level 5 course.
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-year" data-i18n="courseLabel2">
+                Courses
+              </span>
+              <h4 data-i18n="fundamentalsTitle">
+                Technical Fundamentals
+              </h4>
+              <p data-i18n="fundamentalsDesc">
+                Programming basics, networking fundamentals,
+                and cybersecurity fundamentals.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="section alt-section">
+      <div class="container">
+        <p class="section-kicker" data-i18n="hobbiesKicker">
+          05 / INTERESTS
+        </p>
+        <h2 class="section-title" data-i18n="hobbiesTitle">
+          What Drives Me.
+        </h2>
+
+        <div class="hobbies-grid">
+          <article class="panel">
+            <div class="panel-icon">⌨</div>
+            <h3 data-i18n="hobby1">Programming</h3>
+          </article>
+          <article class="panel">
+            <div class="panel-icon">◎</div>
+            <h3 data-i18n="hobby2">Problem Solving</h3>
+          </article>
+          <article class="panel">
+            <div class="panel-icon">◇</div>
+            <h3 data-i18n="hobby3">Cybersecurity</h3>
+          </article>
+          <article class="panel">
+            <div class="panel-icon">↗</div>
+            <h3 data-i18n="hobby4">Learning New Technologies</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="section-kicker" data-i18n="contactKicker">
+          06 / CONNECT
+        </p>
+        <h2 class="section-title" data-i18n="contactTitle">
+          Let's Connect.
+        </h2>
+        <p class="section-subtitle" data-i18n="contactIntro">
+          Interested in collaborating or discussing an opportunity?
+          I'd be happy to hear from you.
+        </p>
+
+        <div class="contact-layout">
+          <div class="contact-details">
+            <a class="contact-item"
+              href="mailto:mohammadkhirbanitaha@gmail.com">
+              <span class="contact-icon">@</span>
+              <span>
+                <strong>Email</strong>
+                <small>mohammadkhirbanitaha@gmail.com</small>
+              </span>
+              <span>↗</span>
+            </a>
+
+            <a class="contact-item"
+              href="https://github.com/mohammadkhir-bani-taha"
+              target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon">⌘</span>
+              <span>
+                <strong>GitHub</strong>
+                <small>mohammadkhir-bani-taha</small>
+              </span>
+              <span>↗</span>
+            </a>
+
+            <a class="contact-item"
+              href="https://www.linkedin.com/in/mohammadkhir-bani-taha-474792302"
+              target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon">in</span>
+              <span>
+                <strong>LinkedIn</strong>
+                <small>MohammadKhir Bani Taha</small>
+              </span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <h3 data-i18n="formTitle">Send a message</h3>
+
+            <label for="name" data-i18n="nameLabel">
+              Your Name
+            </label>
+            <input id="name" name="name" type="text"
+              required autocomplete="name"
+              data-i18n-placeholder="namePlaceholder"
+              placeholder="Enter your name">
+
+            <label for="email" data-i18n="emailLabel">
+              Your Email
+            </label>
+            <input id="email" name="email" type="email"
+              required autocomplete="email"
+              data-i18n-placeholder="emailPlaceholder"
+              placeholder="Enter your email">
+
+            <label for="message" data-i18n="messageLabel">
+              Your Message
+            </label>
+            <textarea id="message" name="message" rows="5"
+              required data-i18n-placeholder="messagePlaceholder"
+              placeholder="Write your message..."></textarea>
+
+            <button class="btn btn-primary submit-btn"
+              type="submit" data-i18n="sendBtn">
+              Open Email App ↗
+            </button>
+
+            <p class="form-note" data-i18n="formNote">
+              This form opens your email application;
+              it does not send messages directly.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#home">MK<span>.</span></a>
+      <p data-i18n="footerText">
+        © 2026 MohammadKhir Bani Taha. Built with care.
+      </p>
+      <a href="#home" data-i18n="backTop">Back to top ↑</a>
+    </div>
+  </footer>
 
 </body>
 </html>

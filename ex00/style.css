@@ -211,6 +211,9 @@ section h2 {
     word-break: break-word;
 }
 
+
+
+
 /* Light Theme overrides for Contact Cards */
 .light-theme .contact-card {
     background-color: #ffffff;
@@ -218,8 +221,16 @@ section h2 {
 
 .light-theme .contact-container > p,
 .light-theme .contact-card p {
-    color: #475569;
+    color: #bd340a;
 }
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
     background-color: #1e293b;
