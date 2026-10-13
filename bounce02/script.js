@@ -299,6 +299,9 @@ const langBtn = document.getElementById("langBtn");
 let currentLang =
   localStorage.getItem("portfolio-lang") === "ar" ? "ar" : "en";
 
+
+
+
 function setLanguage(lang) {
   currentLang = lang;
 
@@ -317,6 +320,10 @@ function setLanguage(lang) {
     }
   });
 
+
+
+
+
   const placeholders = document.querySelectorAll(
     "[data-i18n-placeholder]"
   );
@@ -333,6 +340,10 @@ function setLanguage(lang) {
 
   localStorage.setItem("portfolio-lang", lang);
 }
+
+
+
+
 
 setLanguage(currentLang);
 
